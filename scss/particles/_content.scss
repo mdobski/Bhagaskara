@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+
+
+
+
+
+@media (min-width: 992px) {
+    .services, .about, .blog {
+        float: right;
+    }
+}
+
+
 html, body, header, section, footer {
     width: 100%;
 }
@@ -37,6 +49,14 @@ html, body, header, section, footer {
         margin-top: 20px;
         margin-bottom: 100px;
         font-size: 23px;
+    }
+    div.upper-menu {
+        .services {
+            
+        }
+        .portfolio {
+            
+        }
     }
     div.lower-menu {
         margin: 0 auto;
@@ -91,6 +111,9 @@ html, body, header, section, footer {
     color: $regularFontColor;
     font-family: 'Lato';
     padding: 100px 0;
+    h3 {
+        padding: 20px 0;
+    }
     .frame {
         display: flex;
         justify-content: center;
@@ -132,26 +155,72 @@ html, body, header, section, footer {
 }
 
 #about {
-    padding: 100px 0;
+    padding: 200px 0;
     .about-header {
-        position: relative;
-        .header-arrow-left {
-            width: 15px;
-            height: 15px;
-            border-left: 1px solid $purple;
-            border-bottom: 1px solid $purple;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+        .header-wrapper {
+            position: relative;
+            .header-arrow-left {
+                position: absolute;
+                top: 55px;
+                left: -18px;
+                width: 15px;
+                height: 15px;
+                border-left: 1px solid $purple;
+                border-bottom: 1px solid $purple;
+            }
+            .header-arrow-right {
+                position: absolute;
+                top: 5px;
+                left: 220px;
+                width: 15px;
+                height: 15px;
+                border-right: 1px solid $purple;
+                border-top: 1px solid $purple;
+            }
         }
-        .header-arrow-right {
-            width: 15px;
-            height: 15px;
-            border-right: 1px solid $purple;
-            border-top: 1px solid $purple;
+        h2 {
+            display: inline-block;
+            position: relative;
+            font-family: 'Existence';
+            font-size: 50px;
         }
     }
     
+    
 }
 
-
+#quote-first {
+    background: url('../../images/quote-bg.png') no-repeat;
+    background-size: 100% 100%;
+    .quote-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 150px auto;
+        .quote-frame {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('../../images/icon-frame.png') no-repeat;
+            width: 167px;
+            height: 181px;
+            margin-bottom: 70px;
+            .quote-icon {
+                background: url('../../images/quote-icon.png') no-repeat;
+                width: 68px;
+                height: 60px;
+            }
+        }
+        .quote-text {
+            font-family: 'Lato';
+            font-size: 50px;
+            color: white;
+        }
+    }
+}
 
 
 
