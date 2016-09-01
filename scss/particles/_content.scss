@@ -160,9 +160,9 @@ html, body, header, section, footer {
         display: flex;
         justify-content: center;
         margin-bottom: 60px;
-        .header-wrapper {
+        .about-header-wrapper {
             position: relative;
-            .header-arrow-left {
+            .about-header-arrow-left {
                 position: absolute;
                 top: 55px;
                 left: -18px;
@@ -171,7 +171,7 @@ html, body, header, section, footer {
                 border-left: 1px solid $purple;
                 border-bottom: 1px solid $purple;
             }
-            .header-arrow-right {
+            .about-header-arrow-right {
                 position: absolute;
                 top: 5px;
                 left: 220px;
@@ -199,7 +199,7 @@ html, body, header, section, footer {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin: 150px auto;
+        margin: 100px auto;
         .quote-frame {
             display: flex;
             justify-content: center;
@@ -207,7 +207,7 @@ html, body, header, section, footer {
             background: url('../../images/icon-frame.png') no-repeat;
             width: 167px;
             height: 181px;
-            margin-bottom: 70px;
+            margin-bottom: 50px;
             .quote-icon {
                 background: url('../../images/quote-icon.png') no-repeat;
                 width: 68px;
@@ -222,7 +222,107 @@ html, body, header, section, footer {
     }
 }
 
-
+#team {
+    padding: 200px 0;
+    .team-header {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+        .team-header-wrapper {
+            position: relative;
+            .team-header-arrow-left {
+                position: absolute;
+                top: 55px;
+                left: -18px;
+                width: 15px;
+                height: 15px;
+                border-left: 1px solid $purple;
+                border-bottom: 1px solid $purple;
+            }
+            .team-header-arrow-right {
+                position: absolute;
+                top: 5px;
+                left: 220px;
+                width: 15px;
+                height: 15px;
+                border-right: 1px solid $purple;
+                border-top: 1px solid $purple;
+            }
+        }
+        h2 {
+            display: inline-block;
+            position: relative;
+            font-family: 'Existence';
+            font-size: 50px;
+        }
+    }
+    
+    .team-arrows {
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        .team-arw-left {
+            padding-right: 3px;
+            .left-arw-frame {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: url('../../images/icon-frame-small.png') no-repeat;
+                width: 64px;
+                height: 70px;
+                .left-arw {
+                    font-size: 40px;
+                    font-weight: bold;
+                    color: $purple;
+                }
+            }
+        }
+        .team-arw-right {
+            padding-left: 3px;
+            .right-arw-frame {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: url('../../images/icon-frame-small.png') no-repeat;
+                width: 64px;
+                height: 70px;
+                .right-arw {
+                    font-size: 40px;
+                    font-weight: bold;
+                    color: $purple;
+                }
+            }
+        }
+    }
+    
+    .team-profiles {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 200px;
+        .profile-1, .profile-2, .profile-3 {
+            text-align: center;
+            .profile-img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background: grey;
+                margin: 0 auto 10% auto;
+            }
+            .social-imgs {
+                display: flex;
+                justify-content: center;
+                margin: 10% 0;
+                &> div {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px solid grey;
+                    margin: 0 5%;
+                }
+            }
+        }
+    }
+}
 
 
 

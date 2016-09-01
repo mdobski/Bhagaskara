@@ -158,9 +158,9 @@ html, body, header, section, footer {
     display: flex;
     justify-content: center;
     margin-bottom: 60px; }
-    #about .about-header .header-wrapper {
+    #about .about-header .about-header-wrapper {
       position: relative; }
-      #about .about-header .header-wrapper .header-arrow-left {
+      #about .about-header .about-header-wrapper .about-header-arrow-left {
         position: absolute;
         top: 55px;
         left: -18px;
@@ -168,7 +168,7 @@ html, body, header, section, footer {
         height: 15px;
         border-left: 1px solid #9f449b;
         border-bottom: 1px solid #9f449b; }
-      #about .about-header .header-wrapper .header-arrow-right {
+      #about .about-header .about-header-wrapper .about-header-arrow-right {
         position: absolute;
         top: 5px;
         left: 220px;
@@ -189,7 +189,7 @@ html, body, header, section, footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 150px auto; }
+    margin: 100px auto; }
     #quote-first .quote-content .quote-frame {
       display: flex;
       justify-content: center;
@@ -197,7 +197,7 @@ html, body, header, section, footer {
       background: url("../../images/icon-frame.png") no-repeat;
       width: 167px;
       height: 181px;
-      margin-bottom: 70px; }
+      margin-bottom: 50px; }
       #quote-first .quote-content .quote-frame .quote-icon {
         background: url("../../images/quote-icon.png") no-repeat;
         width: 68px;
@@ -206,3 +206,85 @@ html, body, header, section, footer {
       font-family: 'Lato';
       font-size: 50px;
       color: white; }
+
+#team {
+  padding: 200px 0; }
+  #team .team-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px; }
+    #team .team-header .team-header-wrapper {
+      position: relative; }
+      #team .team-header .team-header-wrapper .team-header-arrow-left {
+        position: absolute;
+        top: 55px;
+        left: -18px;
+        width: 15px;
+        height: 15px;
+        border-left: 1px solid #9f449b;
+        border-bottom: 1px solid #9f449b; }
+      #team .team-header .team-header-wrapper .team-header-arrow-right {
+        position: absolute;
+        top: 5px;
+        left: 220px;
+        width: 15px;
+        height: 15px;
+        border-right: 1px solid #9f449b;
+        border-top: 1px solid #9f449b; }
+    #team .team-header h2 {
+      display: inline-block;
+      position: relative;
+      font-family: 'Existence';
+      font-size: 50px; }
+  #team .team-arrows {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center; }
+    #team .team-arrows .team-arw-left {
+      padding-right: 3px; }
+      #team .team-arrows .team-arw-left .left-arw-frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../../images/icon-frame-small.png") no-repeat;
+        width: 64px;
+        height: 70px; }
+        #team .team-arrows .team-arw-left .left-arw-frame .left-arw {
+          font-size: 40px;
+          font-weight: bold;
+          color: #9f449b; }
+    #team .team-arrows .team-arw-right {
+      padding-left: 3px; }
+      #team .team-arrows .team-arw-right .right-arw-frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../../images/icon-frame-small.png") no-repeat;
+        width: 64px;
+        height: 70px; }
+        #team .team-arrows .team-arw-right .right-arw-frame .right-arw {
+          font-size: 40px;
+          font-weight: bold;
+          color: #9f449b; }
+  #team .team-profiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 200px; }
+    #team .team-profiles .profile-1, #team .team-profiles .profile-2, #team .team-profiles .profile-3 {
+      text-align: center; }
+      #team .team-profiles .profile-1 .profile-img, #team .team-profiles .profile-2 .profile-img, #team .team-profiles .profile-3 .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: grey;
+        margin: 0 auto 10% auto; }
+      #team .team-profiles .profile-1 .social-imgs, #team .team-profiles .profile-2 .social-imgs, #team .team-profiles .profile-3 .social-imgs {
+        display: flex;
+        justify-content: center;
+        margin: 10% 0; }
+        #team .team-profiles .profile-1 .social-imgs > div, #team .team-profiles .profile-2 .social-imgs > div, #team .team-profiles .profile-3 .social-imgs > div {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 1px solid grey;
+          margin: 0 5%; }
