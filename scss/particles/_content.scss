@@ -159,7 +159,7 @@ html, body, header, section, footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url('../../images/icon-frame.png') no-repeat;
+        background: url('../../images/icon-frame-grey.png') no-repeat;
         width: 167px;
         height: 181px;
         .icon {
@@ -281,12 +281,23 @@ html, body, header, section, footer {
         margin: 0 200px;
         .profile-1, .profile-2, .profile-3 {
             text-align: center;
+            transform: scale(1.0);
+            -webkit-transition: 0.5s ease-in-out;
+            -moz-transition: 0.5s ease-in-out;
+            -o-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -o-transform: scale(1.1);
+            }
             .profile-img {
                 width: 150px;
                 height: 150px;
                 border-radius: 50%;
                 background: grey;
-                margin: 0 auto 10% auto;
+                margin: 0 auto 30% auto;
             }
             .social-imgs {
                 display: flex;
@@ -302,13 +313,9 @@ html, body, header, section, footer {
             }
         }
     }
-}
-
-// Section SERVICE
-
-#service {
-    margin: 200px 0;
+    
     .progress-bars {
+        margin-top: 10vh;
         .skill-1, .skill-3 {
             padding-right: 5%;
             margin-bottom: 20px;
@@ -342,7 +349,6 @@ html, body, header, section, footer {
                 display: flex;
                 align-items: center;
                 .bar-progress {
-                    width: 90%;
                     background: $purple;
                     height: 11px;
                     margin-left: 2px;
@@ -354,7 +360,6 @@ html, body, header, section, footer {
                 display: flex;
                 align-items: center;
                 .bar-progress {
-                    width: 70%;
                     background: $purple;
                     height: 11px;
                     margin-left: 2px;
@@ -366,7 +371,6 @@ html, body, header, section, footer {
                 display: flex;
                 align-items: center;
                 .bar-progress {
-                    width: 75%;
                     background: $purple;
                     height: 11px;
                     margin-left: 2px;
@@ -378,14 +382,24 @@ html, body, header, section, footer {
                 display: flex;
                 align-items: center;
                 .bar-progress {
-                    width: 85%;
                     background: $purple;
                     height: 11px;
                     margin-left: 2px;
                 }
             }
         }
-    }  
+    }
+}
+
+.profile-focus {
+    background-color: #fde4ff;
+}
+
+// Section SERVICE
+
+#service {
+    margin: 200px 0;
+      
 }
 
 // Section QUOTE 2

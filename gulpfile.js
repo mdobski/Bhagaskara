@@ -23,5 +23,6 @@ gulp.task('default', ['sass'], function() {
     })
     
     gulp.watch('./scss/**/*.scss', ['sass']);
+    gulp.watch('./js/app.js');
     gulp.watch('./index.html', browserSync.reload);
 });
