@@ -1,13 +1,13 @@
 $(function() {
     
+    // Section HOME
+    
     
     
     
     // Section TEAM
     
     var profile = $('.team-profiles').find('>div');
-//    var prev = $('.team-arrows').first();
-//    var next = $('.team-arrows').last();
     
     var bars = $('.progress-bars');
     var webBar = $('.progress-bars').find('.web-bar');
@@ -47,56 +47,65 @@ $(function() {
             }, 500);
             graphicBar.find('.bar-percentage').text('70%');
             
-            htmlBar.find('.bar-progress').animate({
-                width: '75%'
+            var htmlProgress = htmlBar.find('.bar-progress');
+            htmlProgress.animate({
+                width: (0.75*htmlProgress.parent().width())
             }, 500);
             htmlBar.find('.bar-percentage').text('75%');
             
-            uxBar.find('.bar-progress').animate({
-                width: '75%'
+            var uxProgress = uxBar.find('.bar-progress');
+            uxProgress.animate({
+                width: (0.75*uxProgress.parent().width())
             }, 500);
             uxBar.find('.bar-percentage').text('75%');
             
         } else if ($(this).hasClass('profile-2')) {
-            var innerProgress = webBar.find('.bar-progress');
-            innerProgress.animate({
-                width: (0.15*innerProgress.parent().width())
+            var webProgress = webBar.find('.bar-progress');
+            webProgress.animate({
+                width: (0.40*webProgress.parent().width())
             }, 500);
             webBar.find('.bar-percentage').text('40%');
             
-            graphicBar.find('.bar-progress').animate({
-                width: '95%'
+            var graphicProgress = graphicBar.find('.bar-progress');
+            graphicProgress.animate({
+                width: (0.95*graphicProgress.parent().width())
             }, 500);
             graphicBar.find('.bar-percentage').text('95%');
             
-            htmlBar.find('.bar-progress').animate({
-                width: '70%'
+            var htmlProgress = htmlBar.find('.bar-progress');
+            htmlProgress.animate({
+                width: (0.7*htmlProgress.parent().width())
             }, 500);
             htmlBar.find('.bar-percentage').text('70%');
             
-            uxBar.find('.bar-progress').animate({
-                width: '90%'
+            var uxProgress = uxBar.find('.bar-progress');
+            uxProgress.animate({
+                width: (0.9*uxProgress.parent().width())
             }, 500);
             uxBar.find('.bar-percentage').text('90%');
             
         } else {
-            webBar.find('.bar-progress').animate({
-                width: '65%'
+            var webProgress = webBar.find('.bar-progress');
+            webProgress.animate({
+                width: (0.65*webProgress.parent().width())
             }, 500);
             webBar.find('.bar-percentage').text('65%');
             
-            graphicBar.find('.bar-progress').animate({
-                width: '70%'
+            var graphicProgress = graphicBar.find('.bar-progress');
+            graphicProgress.animate({
+                width: (0.7*graphicProgress.parent().width())
             }, 500);
             graphicBar.find('.bar-percentage').text('70%');
             
-            htmlBar.find('.bar-progress').animate({
-                width: '35%'
+            var htmlProgress = htmlBar.find('.bar-progress');
+            htmlProgress.animate({
+                width: (0.35*htmlProgress.parent().width())
             }, 500);
             htmlBar.find('.bar-percentage').text('35%');
             
-            uxBar.find('.bar-progress').animate({
-                width: '75%'
+            var uxProgress = uxBar.find('.bar-progress');
+            uxProgress.animate({
+                width: (0.75*uxProgress.parent().width())
             }, 500);
             uxBar.find('.bar-percentage').text('75%');
         }
@@ -106,45 +115,80 @@ $(function() {
         $(this).removeClass('profile-focus');
         
         
-        //bars.find('.bar-percentage').text('');
+        bars.find('.bar-percentage').text('');
         bars.find('.bar-progress').finish();
     })
     
     $('.team-profiles').on('mouseleave', function() {
-        bars.find('.bar-progress').css('width', 0);
+        bars.find('.bar-progress').animate({
+            width: 0
+        }, 300)
     })
     
     
     // Section BLOG
     
     var days = $('.data-days');
-    var activity = $('.data-active');
+    var activity = $('.data-active').find('span');
     var users = $('.data-users');
     var posts = $('.data-posts');
     
     var countStop = 1;
     
-    // marekwozniak1@gmail.com 785 119 505
-    
     $(window).on('scroll', function() {
         
-        var position = $('#blog').offset().top -$(window).height();
-        var temp = 0;
+        var position = $('#blog').offset().top - $(window).height() + ($('#blog').height() * 0.4);
+        var tempDays = 0;
+        var tempActivity = 0;
+        var tempUsers = 0;
+        var tempPosts = 0;
         
         
         if (($(window).scrollTop() > position) && countStop) {
             
-            var interval = setInterval(count, 10);
+            var intervalDays = setInterval(countDays, 15);
+            var intervalActivity = setInterval(countActivity, 17);
+            var intervalUsers = setInterval(countUsers, 8);
+            var intervalPosts = setInterval(countPosts, 6);
             countStop = 0;
-            function count() {
-                temp+=9;
-                var t1 = temp.toString().substr(0,1);
-                var t2 = temp.toString().substr(1,4);
+            
+            function countDays() {
+                tempDays+=5;
+                
+                days.text(tempDays);
+                if (tempDays >= 365) {
+                    clearInterval(intervalDays);
+                }
+            }
+            
+            function countActivity() {
+                tempActivity+=1;
+                
+                activity.text(tempActivity);
+                if (tempActivity >= 98) {
+                    clearInterval(intervalActivity);
+                }
+            }
+            
+            function countUsers() {
+                tempUsers+=3;
+                
+                users.text(tempUsers);
+                if (tempUsers >= 873) {
+                    clearInterval(intervalUsers);
+                }
+            }
+            
+            function countPosts() {
+                tempPosts+=11;
+                
+                var t1 = tempPosts.toString().substr(0,1);
+                var t2 = tempPosts.toString().substr(1,4);
                 
                 var result = t1 + ',' + t2;
-                $('.data-days').text(result);
-                if (temp >= 5365) {
-                    clearInterval(interval);
+                posts.text(result);
+                if (tempPosts >= 5379) {
+                    clearInterval(intervalPosts);
                 }
             }
         }

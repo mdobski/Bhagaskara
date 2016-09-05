@@ -101,30 +101,84 @@ html, body, header, section, footer {
 
 #home {
   background: url("../../images/header-bg.png") no-repeat;
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  color: white; }
   #home h1 {
     display: block;
     font-family: 'Existence';
-    color: white;
-    font-size: 100px;
-    margin: 80px auto;
+    font-size: 80px;
+    margin: 70px auto;
     text-align: center; }
   #home h2, #home p {
     font-family: 'Lato Hairline';
-    color: white;
     text-align: center;
     font-size: 30px; }
   #home p {
-    margin-top: 20px;
-    margin-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 70px;
     font-size: 23px; }
+  #home .icon-title {
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 17px; }
+  #home .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("../../images/icon-frame.png") no-repeat;
+    width: 150px;
+    height: 162px;
+    margin: 0 auto; }
+  #home a {
+    text-decoration: none;
+    color: white; }
+    #home a:hover > div {
+      background: url("../../images/icon-frame-hover.png") no-repeat; }
+    #home a:hover .arrow-frame {
+      background: url("../../images/icon-frame-medium-hover.png") no-repeat; }
+      #home a:hover .arrow-frame .arrow-down {
+        background: url("../../images/header_icons/nav-arrow-icon-hover.png") no-repeat; }
+  #home div.upper-menu .services .icon-services {
+    background: url("../../images/header_icons/nav-3-icon.png") no-repeat;
+    width: 55px;
+    height: 49px; }
+  #home div.upper-menu .portfolio .icon-portfolio {
+    background: url("../../images/header_icons/nav-4-icon.png") no-repeat;
+    width: 45px;
+    height: 48px; }
   #home div.lower-menu {
     margin: 0 auto; }
-  #home div.icons {
-    background: url("../../images/icon-frame.png") no-repeat;
-    width: 167px;
-    height: 181px;
-    margin: 0 auto; }
+    #home div.lower-menu .about .icon-about {
+      background: url("../../images/header_icons/nav-1-icon.png") no-repeat;
+      width: 51px;
+      height: 51px; }
+    #home div.lower-menu .team .icon-team {
+      background: url("../../images/header_icons/nav-2-icon.png") no-repeat;
+      width: 50px;
+      height: 50px; }
+    #home div.lower-menu .blog .icon-blog {
+      background: url("../../images/header_icons/nav-5-icon.png") no-repeat;
+      width: 52px;
+      height: 52px; }
+    #home div.lower-menu .contact .icon-contact {
+      background: url("../../images/header_icons/nav-6-icon.png") no-repeat;
+      width: 52px;
+      height: 52px; }
+  #home .arrow-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 37px auto;
+    background: url("../../images/icon-frame-medium.png") no-repeat;
+    width: 77px;
+    height: 83px; }
+    #home .arrow-frame .arrow-down {
+      background: url("../../images/header_icons/nav-arrow-icon.png") no-repeat;
+      width: 27px;
+      height: 15px; }
 
 #footer {
   line-height: 100px;
@@ -195,7 +249,7 @@ html, body, header, section, footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url("../../images/icon-frame.png") no-repeat;
+      background: url("../../images/old_frame/icon-frame.png") no-repeat;
       width: 167px;
       height: 181px;
       margin-bottom: 50px; }
@@ -210,36 +264,6 @@ html, body, header, section, footer {
 
 #team {
   margin: 200px 0; }
-  #team .team-arrows {
-    margin: 50px auto;
-    display: flex;
-    justify-content: center; }
-    #team .team-arrows .team-arw-left {
-      padding-right: 3px; }
-      #team .team-arrows .team-arw-left .left-arw-frame {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: url("../../images/icon-frame-small.png") no-repeat;
-        width: 64px;
-        height: 70px; }
-        #team .team-arrows .team-arw-left .left-arw-frame .left-arw {
-          font-size: 40px;
-          font-weight: bold;
-          color: #9f449b; }
-    #team .team-arrows .team-arw-right {
-      padding-left: 3px; }
-      #team .team-arrows .team-arw-right .right-arw-frame {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: url("../../images/icon-frame-small.png") no-repeat;
-        width: 64px;
-        height: 70px; }
-        #team .team-arrows .team-arw-right .right-arw-frame .right-arw {
-          font-size: 40px;
-          font-weight: bold;
-          color: #9f449b; }
   #team .team-profiles {
     display: flex;
     justify-content: space-around;
@@ -340,7 +364,7 @@ html, body, header, section, footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url("../../images/icon-frame.png") no-repeat;
+      background: url("../../images/old_frame/icon-frame.png") no-repeat;
       width: 167px;
       height: 181px;
       margin-bottom: 50px; }
@@ -385,6 +409,36 @@ html, body, header, section, footer {
       height: 5px;
       background-color: grey;
       border-radius: 50%; }
+  #blog .team-arrows {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center; }
+    #blog .team-arrows .team-arw-left {
+      padding-right: 3px; }
+      #blog .team-arrows .team-arw-left .left-arw-frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../../images/icon-frame-small.png") no-repeat;
+        width: 64px;
+        height: 70px; }
+        #blog .team-arrows .team-arw-left .left-arw-frame .left-arw {
+          font-size: 40px;
+          font-weight: bold;
+          color: #9f449b; }
+    #blog .team-arrows .team-arw-right {
+      padding-left: 3px; }
+      #blog .team-arrows .team-arw-right .right-arw-frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../../images/icon-frame-small.png") no-repeat;
+        width: 64px;
+        height: 70px; }
+        #blog .team-arrows .team-arw-right .right-arw-frame .right-arw {
+          font-size: 40px;
+          font-weight: bold;
+          color: #9f449b; }
 
 #portfolio {
   margin: 100px 0; }
