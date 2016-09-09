@@ -196,20 +196,78 @@ $(function() {
     });
     
     
+    // Section PORTFOLIO
+    
+    var imgs = document.querySelectorAll('.thumbnails>div');
+    var btns = document.querySelectorAll('.tag-btns>button');
+    var btnAll = document.querySelector('.all');
+    
+    btnAll.classList.add('selected');
     
     
+    function tags() {
+        for (var i = 0; i < btns.length; i++) {
+
+            btns[i].addEventListener('click', function() {
+                var tag = this.dataset.tag;
+                
+                btns.forEach(function(btn){
+                    btn.classList.remove('selected');
+                })
+                this.classList.add('selected');
+                console.log(this.parentElement.children);
+                
+
+                if (tag != 'all') {
+                    for (var j = 0; j < imgs.length; j++) {
+                        var tags = imgs[j].dataset.tag;
+                        
+                        imgs[j].classList.add('invisible');
+                        
+                        for (var t = 0; t < tags.length; t++) {
+                            if (tag == tags.substring(t, t + tag.length)) {
+                                imgs[j].classList.remove('invisible');
+
+                            }
+                        }
+                    }
+                } else {
+                    for (var j = 0; j < imgs.length; j++) {
+                        imgs[j].classList.remove('invisible');
+                    }
+                }
+
+            })
+        }
+    }
     
+    tags();
     
+    var body = document.querySelector('body');
+    var images = document.querySelectorAll('.thumb-img');
     
+    var bigImg = document.createElement('div');
+    bigImg.classList.add('fullscreen');
+    bigImg.innerHTML = '<img>';
     
+    function enlarge() {
+        for (var i = 0; i < images.length; i++) {
+            images[i].addEventListener('click', function() {
+                var src = $(this).css('background-image').replace(/^url\(['"]?/,'').replace(/['"]?\)$/,'');
+                
+                var img = bigImg.querySelector('img');
+                img.setAttribute('src', src);
+                
+                body.appendChild(bigImg);
+            })
+        }
+        var image = bigImg.querySelector('img');
+        image.addEventListener('click', function() {
+            body.removeChild(bigImg);
+        })
+    }
     
-    
-    
-    
-    
-    
-    
-    
+    enlarge();
     
     
     
