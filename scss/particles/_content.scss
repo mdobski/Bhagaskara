@@ -673,7 +673,33 @@ html, body, header, section, footer {
     }
 }
 
-
+#contact {
+    form {
+        input {
+            margin: 20px auto;
+            width: 80%;
+        }
+    }
+    .contact-button {
+        color: white;
+        background-color: $purple;
+        border-radius: 5px;
+        padding: 25px 60px;
+        font-size: 20px;
+        text-decoration: none;
+        border-bottom: 5px solid #690869;
+        &:hover {
+            background-color: white;
+            border: 2px solid #690869;
+            border-top: 5px solid #690869;
+            color: #690869;
+        }
+    }
+    .footer-logo {
+        text-align: center;
+        margin: 40px 0;
+    }
+}
 
 
 
