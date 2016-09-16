@@ -9,18 +9,17 @@
 
 
 
-@media (min-width: 992px) {
-    .services, .about, .blog {
-        float: right;
-    }
-}
 
+
+html {
+    font-size: 10px;
+}
 
 html, body, header, section, footer {
     width: 100%;
 }
 .container {
-    border: 1px solid red;
+//    border: 1px solid red;
 }
 
 .kara {
@@ -32,7 +31,7 @@ html, body, header, section, footer {
 [class$='-header'] {
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
     [class*='-header-wrapper'] {
         position: relative;
         [class*='-header-arrow-left'] {
@@ -58,7 +57,7 @@ html, body, header, section, footer {
         display: inline-block;
         position: relative;
         font-family: 'Existence';
-        font-size: 50px;
+        font-size: 5rem;
     }
 }
 
@@ -67,30 +66,33 @@ html, body, header, section, footer {
 #home {
     background: url('../../images/header-bg.png') no-repeat;
     background-size: 100% 100%;
+    width: 100%;
+    height: 0;
+    padding-bottom: 54.95%;
     color: white;
     h1 {
         display: block;
         font-family: 'Existence';
-        font-size: 80px;
-        margin: 70px auto;
+        font-size: 8rem;
+        margin: 7rem auto;
         text-align: center;
     }
     h2, p {
         font-family: 'Lato Hairline';
         text-align: center;
-        font-size: 30px;
+        font-size: 3rem;
     }
     p {
-        margin-top: 10px;
-        margin-bottom: 70px;
-        font-size: 23px;
+        margin-top: 1rem;
+        margin-bottom: 7rem;
+        font-size: 2.3rem;
     }
     .icon-title {
-        margin-top: 20px;
+        margin-top: 2rem;
         text-transform: capitalize;
         font-family: 'Lato';
         font-weight: bold;
-        font-size: 17px;
+        font-size: 1.7rem;
     }
     .icons {
         display: flex;
@@ -98,8 +100,8 @@ html, body, header, section, footer {
         align-items: center;
         justify-content: center;
         background: url('../../images/icon-frame.png') no-repeat;
-        width: 150px;
-        height: 162px;
+        width: 15rem;
+        height: 16.2rem;
         margin: 0 auto;
     }
     a {
@@ -123,11 +125,11 @@ html, body, header, section, footer {
                 height: 49px;
             }
         }
-        .portfolio {
-            .icon-portfolio {
-                background: url('../../images/header_icons/nav-4-icon.png') no-repeat;
-                width: 45px;
-                height: 48px;
+        .blog {
+            .icon-blog {
+                background: url('../../images/header_icons/nav-5-icon.png') no-repeat;
+                width: 52px;
+                height: 52px;
             }
         }
     }
@@ -147,11 +149,11 @@ html, body, header, section, footer {
                 height: 50px;
             }
         }
-        .blog {
-            .icon-blog {
-                background: url('../../images/header_icons/nav-5-icon.png') no-repeat;
-                width: 52px;
-                height: 52px;
+        .portfolio {
+            .icon-portfolio {
+                background: url('../../images/header_icons/nav-4-icon.png') no-repeat;
+                width: 45px;
+                height: 48px;
             }
         }
         .contact {
@@ -180,14 +182,16 @@ html, body, header, section, footer {
 
 // Footer (nav bar)
 
-#footer {
+#header {
     line-height: 100px;
     color: $regularFontColor;
-    p {
+    .logo-btn {
         display: inline;
         font-family: 'Existence';
         font-size: 25px;
         font-weight: bold;
+        text-decoration: none;
+        color: $regularFontColor;
     }
     ul {
         float: right;
@@ -208,6 +212,15 @@ html, body, header, section, footer {
         }
     }
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid $purple;
+    background-color: white;
+    z-index: 10;
+    margin-bottom: 100px;
+}
 
 // Section INFO
 
@@ -215,7 +228,7 @@ html, body, header, section, footer {
     background-color: $backgroundGrey;
     color: $regularFontColor;
     font-family: 'Lato';
-    padding: 100px 0;
+    padding: 10rem 0;
     h3 {
         padding: 20px 0;
     }
@@ -226,6 +239,9 @@ html, body, header, section, footer {
         background: url('../../images/icon-frame-grey.png') no-repeat;
         width: 167px;
         height: 181px;
+        &:hover {
+            background: url('../../images/icon-frame-purple.png') no-repeat;
+        }
         .icon {
             width: 83px;
             height: 63px;
@@ -238,21 +254,33 @@ html, body, header, section, footer {
         text-align: center;
     }
     .heart {
+        .frame:hover .icon {
+            background: url('../../images/home_icons/home-heart-icon-hover.png') center no-repeat;
+        }
         .icon {
             background: url('../../images/home_icons/home-heart-icon.png') center no-repeat;
         }
     }
     .diamond {
+        .frame:hover .icon {
+            background: url('../../images/home_icons/home-diam-icon-hover.png') center no-repeat;
+        }
         .icon {
             background: url('../../images/home_icons/home-diam-icon.png') center no-repeat;
         }
     }
     .coffee {
+        .frame:hover .icon {
+            background: url('../../images/home_icons/home-coffee-icon-hover.png') center no-repeat;
+        }
         .icon {
             background: url('../../images/home_icons/home-coffee-icon.png') center no-repeat;
         }
     }
     .phone {
+        .frame:hover .icon {
+            background: url('../../images/home_icons/home-phone-icon-hover.png') center no-repeat;
+        }
         .icon {
             background: url('../../images/home_icons/home-phone-icon.png') center no-repeat;
         }
@@ -262,7 +290,14 @@ html, body, header, section, footer {
 // Section ABOUT
 
 #about {
-    padding: 200px 0;
+    padding: 10rem 0;
+    .about-devices-img {
+        background: url('../../images/about-devices.png') no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 0;
+        padding-bottom: 63.39969372128637%;
+    }
 }
 
 // Section QUOTE 1
@@ -300,7 +335,7 @@ html, body, header, section, footer {
 // Section TEAM
 
 #team {
-    margin: 200px 0;
+    padding: 10rem 0;
     .team-profiles {
         display: flex;
         justify-content: space-around;
@@ -424,14 +459,13 @@ html, body, header, section, footer {
 // Section SERVICE
 
 #service {
-    margin: 200px 0;
+    padding: 20rem 0;
       
 }
 
 // Section QUOTE 2
 
-#quote-second {
-    margin: 200px 0;
+#services {
     background: url('../../images/quote-bg.png') no-repeat;
     background-size: 100% 100%;
     .quote-content {
@@ -465,7 +499,7 @@ html, body, header, section, footer {
 // Section BLOG
 
 #blog {
-    padding-bottom: 80px;
+    padding: 10rem 0;
     background-color: $backgroundGrey;
     .blog-data {
         margin: 0 20%;
@@ -565,7 +599,7 @@ html, body, header, section, footer {
 }
 
 #portfolio {
-    margin: 100px 0;
+    padding: 10rem 0;
     .tag-btns {
         text-align: center;
         margin: 35px 0;
@@ -604,7 +638,10 @@ html, body, header, section, footer {
         .thumb-img {
             display: table;
             width: 360px;
-            height: 360px;
+            padding-bottom: 360px;
+//            width: 100%;
+//            height: 0;
+//            padding-bottom: 100%;
             margin: 0 auto;
             cursor: pointer;
             &:hover:after {
@@ -619,32 +656,32 @@ html, body, header, section, footer {
         }
         .thumb-1 {
             div {
-                background: url('../../images/portfolio_imgs/portfolio-img1.png') no-repeat;
+                background: url('../../images/portfolio_imgs/portfolio-img1.png') center no-repeat;
             }
         }
         .thumb-2 {
             div {
-                background: url('../../images/portfolio_imgs/portfolio-img2.png') no-repeat;
+                background: url('../../images/portfolio_imgs/portfolio-img2.png') center no-repeat;
             }
         }
         .thumb-3 {
             div {
-                background: url('../../images/portfolio_imgs/portfolio-img3.png') no-repeat;
+                background: url('../../images/portfolio_imgs/portfolio-img3.png') center no-repeat;
             }
         }
         .thumb-4 {
             div {
-                background: url('../../images/portfolio_imgs/portfolio-img4.png') no-repeat;
+                background: url('../../images/portfolio_imgs/portfolio-img4.png') center no-repeat;
             }
         }
         .thumb-5 {
             div {
-                background: url('../../images/portfolio_imgs/portfolio-img5.png') no-repeat;
+                background: url('../../images/portfolio_imgs/portfolio-img5.png') center no-repeat;
             }
         }
         .thumb-6 {
             div {
-                background: url('../../images/portfolio_imgs/portfolio-img6.png') no-repeat;
+                background: url('../../images/portfolio_imgs/portfolio-img6.png') center no-repeat;
             }
         }
     }
@@ -662,6 +699,7 @@ html, body, header, section, footer {
             padding: 25px 60px;
             font-size: 20px;
             text-decoration: none;
+            border-top: 0.2rem solid $purple;
             border-bottom: 5px solid #690869;
             &:hover {
                 background-color: white;
@@ -675,27 +713,84 @@ html, body, header, section, footer {
 
 #contact {
     form {
-        input {
+        width: 90%;
+        float: right;
+        input, textarea {
             margin: 20px auto;
-            width: 80%;
+            width: 100%;
+        }
+        * {
+            outline: none;
+        }
+        input:not([type="submit"]) {
+            border: 1px solid grey;
+            font-size: 2rem;
+            padding: 1.5rem 2rem;
+            font-family: 'Existence';
+            &:first-child {
+                margin-top: 0;
+            }
+            &::-webkit-input-placeholder {
+              color: black;
+            }
+            &:focus {
+                font-family: 'Lato';
+                outline: red;
+            }
+        }
+        textarea {
+            height: 10em;
+            border: 1px solid grey;
+            font-size: 2rem;
+            padding: 1.5rem 2rem;
+            resize: none;
+            font-family: 'Existence';
+            &::-webkit-input-placeholder {
+              color: black;
+            }
+            &::-webkit-resizer {
+                display: none;
+                width: 5px;
+                height: 5px;
+                background-color: grey;
+                transform: rotate(45deg);
+                background: url('../../images/header_icons/nav-1-icon.png') no-repeat;
+            }
+            &:focus {
+                &::-webkit-input-placeholder {
+                  color: grey;
+                }
+            }
+        }
+        .submit {
+            width: 40%;
+            color: white;
+            background-color: $purple;
+            border-radius: 0.5rem;
+            padding: 2rem 0;
+            font-size: 2rem;
+            text-decoration: none;
+            border: none;
+            border-top: 0.2rem solid $purple;
+            border-bottom: 0.5rem solid #690869;
+            &:hover {
+                background-color: white;
+                border: 2px solid #690869;
+                border-top: 5px solid #690869;
+                color: #690869;
+            }
         }
     }
-    .contact-button {
-        color: white;
-        background-color: $purple;
-        border-radius: 5px;
-        padding: 25px 60px;
-        font-size: 20px;
-        text-decoration: none;
-        border-bottom: 5px solid #690869;
-        &:hover {
-            background-color: white;
-            border: 2px solid #690869;
-            border-top: 5px solid #690869;
-            color: #690869;
+    
+    .contact-data {
+        width: 90%;
+        span {
+            display: block;
         }
     }
     .footer-logo {
+        font-size: 5rem;
+        font-family: 'Existence';
         text-align: center;
         margin: 40px 0;
     }
@@ -710,6 +805,14 @@ html, body, header, section, footer {
 
 
 
+
+
+
+@media (min-width: 992px) {
+    .services, .about, .blog {
+        float: right;
+    }
+}
 
 
 
