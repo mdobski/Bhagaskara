@@ -24,11 +24,11 @@ $(function() {
     // Header
     
     var header = $('header');
-    var menu = header.find('ul');
+    var menu = header.find('nav');
     var position = header.position().top;
     var info = $('#info');
     
-//    position += 30;
+    position += menu.height() / 3;
     
     //          sticky menu
     
@@ -36,12 +36,12 @@ $(function() {
         var scroll = $(document).scrollTop();
         
         if (scroll > position) {
-            header.addClass('sticky');
-            var headerHeight = header.height();
+            menu.addClass('sticky');
+            var headerHeight = menu.height();
             
             info.css('margin-top', headerHeight);
         } else {
-            header.removeClass('sticky');
+            menu.removeClass('sticky');
             
             info.css('margin-top', '0');
         }
@@ -54,12 +54,12 @@ $(function() {
         position = header.position().top;
         
         if (scroll > position) {
-            header.addClass('sticky');
-            var headerHeight = header.height();
+            menu.addClass('sticky');
+            var headerHeight = menu.height();
             
             info.css('margin-top', headerHeight);
         } else {
-            header.removeClass('sticky');
+            menu.removeClass('sticky');
             
             info.css('margin-top', '0');
         }
