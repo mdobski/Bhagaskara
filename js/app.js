@@ -1,5 +1,23 @@
 $(function() {
     
+    
+    
+    
+    // Each Section header's right border span
+    
+    var rightArrows = document.querySelectorAll('[class*="-header-arrow-right"]');
+    var h2s = document.querySelectorAll('[class*="-header-wrapper"] > h2');
+    console.log(rightArrows,h2s);
+    
+    for (var i = 0; i < rightArrows.length; i++) {
+        
+        for (var j = 0; j < h2s.length; j++) {
+            if (i == j) {
+                rightArrows[i].style.left = h2s[j].offsetWidth + 15 + 'px';
+            }
+        }
+    }
+    
     // Section HOME
     
     
@@ -10,7 +28,7 @@ $(function() {
     var position = header.position().top;
     var info = $('#info');
     
-    position += 30;
+//    position += 30;
     
     //          sticky menu
     
@@ -83,9 +101,9 @@ $(function() {
         if ($(this).hasClass('profile-1')) {
             var webProgress = webBar.find('.bar-progress');
             webProgress.animate({
-                width: (0.9*webProgress.parent().width())
+                width: (0.8*webProgress.parent().width())
             }, 500);
-            webBar.find('.bar-percentage').text('90%');
+            webBar.find('.bar-percentage').text('80%');
             
             var graphicProgress = graphicBar.find('.bar-progress');
             graphicProgress.animate({
@@ -108,9 +126,9 @@ $(function() {
         } else if ($(this).hasClass('profile-2')) {
             var webProgress = webBar.find('.bar-progress');
             webProgress.animate({
-                width: (0.40*webProgress.parent().width())
+                width: (0.65*webProgress.parent().width())
             }, 500);
-            webBar.find('.bar-percentage').text('40%');
+            webBar.find('.bar-percentage').text('65%');
             
             var graphicProgress = graphicBar.find('.bar-progress');
             graphicProgress.animate({
@@ -120,9 +138,9 @@ $(function() {
             
             var htmlProgress = htmlBar.find('.bar-progress');
             htmlProgress.animate({
-                width: (0.7*htmlProgress.parent().width())
+                width: (0.35*htmlProgress.parent().width())
             }, 500);
-            htmlBar.find('.bar-percentage').text('70%');
+            htmlBar.find('.bar-percentage').text('35%');
             
             var uxProgress = uxBar.find('.bar-progress');
             uxProgress.animate({
@@ -133,21 +151,21 @@ $(function() {
         } else {
             var webProgress = webBar.find('.bar-progress');
             webProgress.animate({
-                width: (0.65*webProgress.parent().width())
+                width: (0.80*webProgress.parent().width())
             }, 500);
-            webBar.find('.bar-percentage').text('65%');
+            webBar.find('.bar-percentage').text('80%');
             
             var graphicProgress = graphicBar.find('.bar-progress');
             graphicProgress.animate({
-                width: (0.7*graphicProgress.parent().width())
+                width: (0.55*graphicProgress.parent().width())
             }, 500);
-            graphicBar.find('.bar-percentage').text('70%');
+            graphicBar.find('.bar-percentage').text('55%');
             
             var htmlProgress = htmlBar.find('.bar-progress');
             htmlProgress.animate({
-                width: (0.35*htmlProgress.parent().width())
+                width: (0.9*htmlProgress.parent().width())
             }, 500);
-            htmlBar.find('.bar-percentage').text('35%');
+            htmlBar.find('.bar-percentage').text('90%');
             
             var uxProgress = uxBar.find('.bar-progress');
             uxProgress.animate({
