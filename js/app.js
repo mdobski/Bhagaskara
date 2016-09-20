@@ -279,7 +279,34 @@ $(function() {
         reset();
     });
     
+    var profiles = $('[class*="user-profile"]');
+    var nextProfile = $('.blog-arw-right');
+    var prevProfile = $('.blog-arw-left');
+    var dots = $('[class*="dot-"]');
+    var counter = 1;
     
+    nextProfile.on('click', function() {
+        counter++;
+        $('.profile-selected').removeClass('profile-selected').next().addClass('profile-selected');
+        $('.dot-selected').removeClass('dot-selected').next().addClass('dot-selected');
+        
+        if (counter > profiles.length) {
+            profiles.eq(0).addClass('profile-selected');
+            dots.eq(0).addClass('dot-selected');
+            counter = 1;
+        }
+    })
+    prevProfile.on('click', function() {
+        counter--;
+        $('.profile-selected').removeClass('profile-selected').prev().addClass('profile-selected');
+        $('.dot-selected').removeClass('dot-selected').prev().addClass('dot-selected');
+        
+        if (counter < 1) {
+            profiles.last().addClass('profile-selected');
+            dots.last().addClass('dot-selected');
+            counter = profiles.length;
+        }
+    })
     
     
     
@@ -360,7 +387,14 @@ $(function() {
     enlarge();
     
     
+    //                  hover effect on images
     
+    $(images).on('mouseenter', function() {
+        $(this).children().css('display', 'flex');
+    })
+    $(images).mouseleave(function() {
+        $(this).children().css('display', 'none');
+    })
     
     
     

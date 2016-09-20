@@ -58,6 +58,7 @@ html, body, header, section, footer {
         position: relative;
         font-family: 'Existence';
         font-size: 5rem;
+        color: $regularFontColor;
     }
 }
 
@@ -437,7 +438,7 @@ html, body, header, section, footer {
         }
         .profile-3 {
             .profile-img {
-                background: url('../images/team_imgs/profile%203.png') center no-repeat;
+                background: url('../images/team_imgs/profile%203.jpg') center no-repeat;
             }
         }
     }
@@ -581,12 +582,47 @@ html, body, header, section, footer {
         }
     }
     .feedback {
+        position: relative;
+        @keyframes fadeOut {
+            0% {
+            opacity: 1;
+            }
+            100% {
+            opacity: 0;
+            }
+        }
+        &> [class*='user-'] {
+            display: none;
+        }
+        .profile-hidden {
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            display: block;
+            animation-name: fadeOut;
+            animation-duration: 1s;
+        }
+        @keyframes fadeIn {
+            0% {
+            opacity: 0;
+            }
+            100% {
+            opacity: 1;
+            }
+        }
+        .profile-selected {
+            display: block;
+            animation-name: fadeIn;
+            animation-duration: 1s;
+        }
         .user-img {
             background-color: grey;
-            width: 100px;
-            height: 100px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             margin: 50px auto;
+            box-shadow: 3px 3px 5px grey;
         }
         .user-text {
             margin: 0 20%;
@@ -596,22 +632,51 @@ html, body, header, section, footer {
         .user-name {
             text-align: center;
         }
+        .user-profile1 {
+            .user-img {
+                background: url('../images/blog_users/user1.png') center no-repeat;
+            }
+        }
+        .user-profile2 {
+            .user-img {
+                background: url('../images/blog_users/user2.jpg') center no-repeat;
+            }
+        }
+        .user-profile3 {
+            .user-img {
+                background: url('../images/blog_users/user3.png') center no-repeat;
+            }
+        }
+        .user-profile4 {
+            .user-img {
+                background: url('../images/blog_users/user4.png') center no-repeat;
+            }
+        }
+        .user-profile5 {
+            .user-img {
+                background: url('../images/blog_users/user5.png') center no-repeat;
+            }
+        }
         .nav-dots {
             text-align: center;
             div {
                 display: inline-block;
-                width: 5px;
-                height: 5px;
-                background-color: grey;
+                width: 10px;
+                height: 10px;
+                background-color: white;
                 border-radius: 50%;
+                border: 1px solid grey;
+            }
+            .dot-selected {
+                background-color: grey;
             }
         }
     }
-    .team-arrows {
+    .blog-arrows {
         margin: 50px auto;
         display: flex;
         justify-content: center;
-        .team-arw-left {
+        .blog-arw-left {
             padding-right: 3px;
             .left-arw-frame {
                 display: flex;
@@ -620,6 +685,7 @@ html, body, header, section, footer {
                 background: url('../images/icon-frame-small.png') no-repeat;
                 width: 64px;
                 height: 70px;
+                cursor: pointer;
                 .left-arw {
                     font-size: 40px;
                     font-weight: bold;
@@ -627,7 +693,7 @@ html, body, header, section, footer {
                 }
             }
         }
-        .team-arw-right {
+        .blog-arw-right {
             padding-left: 3px;
             .right-arw-frame {
                 display: flex;
@@ -636,6 +702,7 @@ html, body, header, section, footer {
                 background: url('../images/icon-frame-small.png') no-repeat;
                 width: 64px;
                 height: 70px;
+                cursor: pointer;
                 .right-arw {
                     font-size: 40px;
                     font-weight: bold;
@@ -704,6 +771,7 @@ html, body, header, section, footer {
             margin: 20px 0;
         }
         .thumb-img {
+            position: relative;
             display: table;
             width: 360px;
             padding-bottom: 360px;
@@ -712,14 +780,16 @@ html, body, header, section, footer {
 //            padding-bottom: 100%;
             margin: 0 auto;
             cursor: pointer;
-            &:hover:after {
-                content: url('../images/portfolio_imgs/cross.png');
+            .img-hover {
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
                 background: rgba(0,0,0,0.5);
                 width: 100%;
                 height: 100%;
-                display: table-cell;
-                text-align: center;
-                vertical-align: middle;
             }
         }
         .thumb-1 {

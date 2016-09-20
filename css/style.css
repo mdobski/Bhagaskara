@@ -94,7 +94,8 @@ html, body, header, section, footer {
     display: inline-block;
     position: relative;
     font-family: 'Existence';
-    font-size: 5rem; }
+    font-size: 5rem;
+    color: #676767; }
 
 #home {
   background: url("../images/header-bg.png") no-repeat;
@@ -368,7 +369,7 @@ html, body, header, section, footer {
     #team .team-profiles .profile-2 .profile-img {
       background: url("../images/team_imgs/profile%202.png") center no-repeat; }
     #team .team-profiles .profile-3 .profile-img {
-      background: url("../images/team_imgs/profile%203.png") center no-repeat; }
+      background: url("../images/team_imgs/profile%203.jpg") center no-repeat; }
   #team .progress-bars {
     margin-top: 10vh;
     font-family: 'Lato'; }
@@ -462,53 +463,95 @@ html, body, header, section, footer {
     #blog .blog-data > div p:last-child {
       font-size: 10px;
       color: #808080; }
-  #blog .feedback .user-img {
-    background-color: grey;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 50px auto; }
-  #blog .feedback .user-text {
-    margin: 0 20%;
-    text-align: center;
-    padding: 25px 0; }
-  #blog .feedback .user-name {
-    text-align: center; }
-  #blog .feedback .nav-dots {
-    text-align: center; }
-    #blog .feedback .nav-dots div {
-      display: inline-block;
-      width: 5px;
-      height: 5px;
+  #blog .feedback {
+    position: relative; }
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+    #blog .feedback > [class*='user-'] {
+      display: none; }
+    #blog .feedback .profile-hidden {
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      display: block;
+      animation-name: fadeOut;
+      animation-duration: 1s; }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    #blog .feedback .profile-selected {
+      display: block;
+      animation-name: fadeIn;
+      animation-duration: 1s; }
+    #blog .feedback .user-img {
       background-color: grey;
-      border-radius: 50%; }
-  #blog .team-arrows {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin: 50px auto;
+      box-shadow: 3px 3px 5px grey; }
+    #blog .feedback .user-text {
+      margin: 0 20%;
+      text-align: center;
+      padding: 25px 0; }
+    #blog .feedback .user-name {
+      text-align: center; }
+    #blog .feedback .user-profile1 .user-img {
+      background: url("../images/blog_users/user1.png") center no-repeat; }
+    #blog .feedback .user-profile2 .user-img {
+      background: url("../images/blog_users/user2.jpg") center no-repeat; }
+    #blog .feedback .user-profile3 .user-img {
+      background: url("../images/blog_users/user3.png") center no-repeat; }
+    #blog .feedback .user-profile4 .user-img {
+      background: url("../images/blog_users/user4.png") center no-repeat; }
+    #blog .feedback .user-profile5 .user-img {
+      background: url("../images/blog_users/user5.png") center no-repeat; }
+    #blog .feedback .nav-dots {
+      text-align: center; }
+      #blog .feedback .nav-dots div {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid grey; }
+      #blog .feedback .nav-dots .dot-selected {
+        background-color: grey; }
+  #blog .blog-arrows {
     margin: 50px auto;
     display: flex;
     justify-content: center; }
-    #blog .team-arrows .team-arw-left {
+    #blog .blog-arrows .blog-arw-left {
       padding-right: 3px; }
-      #blog .team-arrows .team-arw-left .left-arw-frame {
+      #blog .blog-arrows .blog-arw-left .left-arw-frame {
         display: flex;
         justify-content: center;
         align-items: center;
         background: url("../images/icon-frame-small.png") no-repeat;
         width: 64px;
-        height: 70px; }
-        #blog .team-arrows .team-arw-left .left-arw-frame .left-arw {
+        height: 70px;
+        cursor: pointer; }
+        #blog .blog-arrows .blog-arw-left .left-arw-frame .left-arw {
           font-size: 40px;
           font-weight: bold;
           color: #9f449b; }
-    #blog .team-arrows .team-arw-right {
+    #blog .blog-arrows .blog-arw-right {
       padding-left: 3px; }
-      #blog .team-arrows .team-arw-right .right-arw-frame {
+      #blog .blog-arrows .blog-arw-right .right-arw-frame {
         display: flex;
         justify-content: center;
         align-items: center;
         background: url("../images/icon-frame-small.png") no-repeat;
         width: 64px;
-        height: 70px; }
-        #blog .team-arrows .team-arw-right .right-arw-frame .right-arw {
+        height: 70px;
+        cursor: pointer; }
+        #blog .blog-arrows .blog-arw-right .right-arw-frame .right-arw {
           font-size: 40px;
           font-weight: bold;
           color: #9f449b; }
@@ -560,19 +603,22 @@ html, body, header, section, footer {
     text-align: center;
     margin: 20px 0; }
   #portfolio .thumbnails .thumb-img {
+    position: relative;
     display: table;
     width: 360px;
     padding-bottom: 360px;
     margin: 0 auto;
     cursor: pointer; }
-    #portfolio .thumbnails .thumb-img:hover:after {
-      content: url("../images/portfolio_imgs/cross.png");
+    #portfolio .thumbnails .thumb-img .img-hover {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
       background: rgba(0, 0, 0, 0.5);
       width: 100%;
-      height: 100%;
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle; }
+      height: 100%; }
   #portfolio .thumbnails .thumb-1 div {
     background: url("../images/portfolio_imgs/portfolio-img1.png") center no-repeat; }
   #portfolio .thumbnails .thumb-2 div {
