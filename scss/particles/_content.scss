@@ -583,6 +583,7 @@ html, body, header, section, footer {
     }
     .feedback {
         position: relative;
+        font-family: 'Lato';
         @keyframes fadeOut {
             0% {
             opacity: 1;
@@ -621,16 +622,18 @@ html, body, header, section, footer {
             width: 140px;
             height: 140px;
             border-radius: 50%;
-            margin: 50px auto;
+            margin: 50px auto 10px auto;
             box-shadow: 3px 3px 5px grey;
         }
         .user-text {
             margin: 0 20%;
             text-align: center;
             padding: 25px 0;
+            line-height: 3rem;
         }
         .user-name {
             text-align: center;
+            font-weight: bold;
         }
         .user-profile1 {
             .user-img {

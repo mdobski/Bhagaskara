@@ -464,7 +464,8 @@ html, body, header, section, footer {
       font-size: 10px;
       color: #808080; }
   #blog .feedback {
-    position: relative; }
+    position: relative;
+    font-family: 'Lato'; }
 @keyframes fadeOut {
   0% {
     opacity: 1; }
@@ -494,14 +495,16 @@ html, body, header, section, footer {
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      margin: 50px auto;
+      margin: 50px auto 10px auto;
       box-shadow: 3px 3px 5px grey; }
     #blog .feedback .user-text {
       margin: 0 20%;
       text-align: center;
-      padding: 25px 0; }
+      padding: 25px 0;
+      line-height: 3rem; }
     #blog .feedback .user-name {
-      text-align: center; }
+      text-align: center;
+      font-weight: bold; }
     #blog .feedback .user-profile1 .user-img {
       background: url("../images/blog_users/user1.png") center no-repeat; }
     #blog .feedback .user-profile2 .user-img {
