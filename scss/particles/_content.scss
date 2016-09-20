@@ -187,29 +187,29 @@ html, body, header, section, footer {
     color: $regularFontColor;
     nav {
         width: 100%;
-    }
-    .logo-btn {
-        display: inline;
-        font-family: 'Existence';
-        font-size: 25px;
-        font-weight: bold;
-        text-decoration: none;
-        color: $regularFontColor;
-    }
-    ul {
-        float: right;
-        list-style-type: none;
-        margin-bottom: 0;
-        li {
-            display: inline-block;
-            margin-left: 30px;
-            a {
-                color: $regularFontColor;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-family: 'Lato';
-                &:hover {
-                    color: $purple;
+        .logo-btn {
+            display: inline;
+            font-family: 'Existence';
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            color: $regularFontColor;
+        }
+        ul {
+            float: right;
+            list-style-type: none;
+            margin-bottom: 0;
+            li {
+                display: inline-block;
+                margin-left: 30px;
+                a {
+                    color: $regularFontColor;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: 'Lato';
+                    &:hover {
+                        color: $purple;
+                    }
                 }
             }
         }
