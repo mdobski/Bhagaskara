@@ -97,7 +97,7 @@ html, body, header, section, footer {
     font-size: 5rem; }
 
 #home {
-  background: url("../../images/header-bg.png") no-repeat;
+  background: url("../images/header-bg.png") no-repeat;
   background-size: 100% 100%;
   width: 100%;
   height: 0;
@@ -128,7 +128,7 @@ html, body, header, section, footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("../../images/icon-frame.png") no-repeat;
+    background: url("../images/icon-frame.png") no-repeat;
     width: 15rem;
     height: 16.2rem;
     margin: 0 auto; }
@@ -136,35 +136,35 @@ html, body, header, section, footer {
     text-decoration: none;
     color: white; }
     #home a:hover > div {
-      background: url("../../images/icon-frame-hover.png") no-repeat; }
+      background: url("../images/icon-frame-hover.png") no-repeat; }
     #home a:hover .arrow-frame {
-      background: url("../../images/icon-frame-medium-hover.png") no-repeat; }
+      background: url("../images/icon-frame-medium-hover.png") no-repeat; }
       #home a:hover .arrow-frame .arrow-down {
-        background: url("../../images/header_icons/nav-arrow-icon-hover.png") no-repeat; }
+        background: url("../images/header_icons/nav-arrow-icon-hover.png") no-repeat; }
   #home div.upper-menu .services .icon-services {
-    background: url("../../images/header_icons/nav-3-icon.png") no-repeat;
+    background: url("../images/header_icons/nav-3-icon.png") no-repeat;
     width: 55px;
     height: 49px; }
   #home div.upper-menu .blog .icon-blog {
-    background: url("../../images/header_icons/nav-5-icon.png") no-repeat;
+    background: url("../images/header_icons/nav-5-icon.png") no-repeat;
     width: 52px;
     height: 52px; }
   #home div.lower-menu {
     margin: 0 auto; }
     #home div.lower-menu .about .icon-about {
-      background: url("../../images/header_icons/nav-1-icon.png") no-repeat;
+      background: url("../images/header_icons/nav-1-icon.png") no-repeat;
       width: 51px;
       height: 51px; }
     #home div.lower-menu .team .icon-team {
-      background: url("../../images/header_icons/nav-2-icon.png") no-repeat;
+      background: url("../images/header_icons/nav-2-icon.png") no-repeat;
       width: 50px;
       height: 50px; }
     #home div.lower-menu .portfolio .icon-portfolio {
-      background: url("../../images/header_icons/nav-4-icon.png") no-repeat;
+      background: url("../images/header_icons/nav-4-icon.png") no-repeat;
       width: 45px;
       height: 48px; }
     #home div.lower-menu .contact .icon-contact {
-      background: url("../../images/header_icons/nav-6-icon.png") no-repeat;
+      background: url("../images/header_icons/nav-6-icon.png") no-repeat;
       width: 52px;
       height: 52px; }
   #home .arrow-frame {
@@ -172,11 +172,11 @@ html, body, header, section, footer {
     justify-content: center;
     align-items: center;
     margin: 0 auto 37px auto;
-    background: url("../../images/icon-frame-medium.png") no-repeat;
+    background: url("../images/icon-frame-medium.png") no-repeat;
     width: 77px;
     height: 83px; }
     #home .arrow-frame .arrow-down {
-      background: url("../../images/header_icons/nav-arrow-icon.png") no-repeat;
+      background: url("../images/header_icons/nav-arrow-icon.png") no-repeat;
       width: 27px;
       height: 15px; }
 
@@ -228,11 +228,11 @@ html, body, header, section, footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../../images/icon-frame-grey.png") no-repeat;
+    background: url("../images/icon-frame-grey.png") no-repeat;
     width: 167px;
     height: 181px; }
     #info .frame:hover {
-      background: url("../../images/icon-frame-purple.png") no-repeat; }
+      background: url("../images/icon-frame-purple.png") no-repeat; }
     #info .frame .icon {
       width: 83px;
       height: 63px; }
@@ -242,28 +242,28 @@ html, body, header, section, footer {
     flex-direction: column;
     text-align: center; }
   #info .heart .frame:hover .icon {
-    background: url("../../images/home_icons/home-heart-icon-hover.png") center no-repeat; }
+    background: url("../images/home_icons/home-heart-icon-hover.png") center no-repeat; }
   #info .heart .icon {
-    background: url("../../images/home_icons/home-heart-icon.png") center no-repeat; }
+    background: url("../images/home_icons/home-heart-icon.png") center no-repeat; }
   #info .diamond .frame:hover .icon {
-    background: url("../../images/home_icons/home-diam-icon-hover.png") center no-repeat; }
+    background: url("../images/home_icons/home-diam-icon-hover.png") center no-repeat; }
   #info .diamond .icon {
-    background: url("../../images/home_icons/home-diam-icon.png") center no-repeat; }
+    background: url("../images/home_icons/home-diam-icon.png") center no-repeat; }
   #info .coffee .frame:hover .icon {
-    background: url("../../images/home_icons/home-coffee-icon-hover.png") center no-repeat; }
+    background: url("../images/home_icons/home-coffee-icon-hover.png") center no-repeat; }
   #info .coffee .icon {
-    background: url("../../images/home_icons/home-coffee-icon.png") center no-repeat; }
+    background: url("../images/home_icons/home-coffee-icon.png") center no-repeat; }
   #info .phone .frame:hover .icon {
-    background: url("../../images/home_icons/home-phone-icon-hover.png") center no-repeat; }
+    background: url("../images/home_icons/home-phone-icon-hover.png") center no-repeat; }
   #info .phone .icon {
-    background: url("../../images/home_icons/home-phone-icon.png") center no-repeat; }
+    background: url("../images/home_icons/home-phone-icon.png") center no-repeat; }
 
 #about {
   padding: 10rem 0; }
   #about .about-content {
     display: flex; }
     #about .about-content .about-devices-img {
-      background: url("../../images/about-devices.png") no-repeat;
+      background: url("../images/about-devices.png") no-repeat;
       background-size: 100%;
       width: 100%;
       height: 0;
@@ -295,7 +295,7 @@ html, body, header, section, footer {
           color: #690869; }
 
 #quote-first {
-  background: url("../../images/quote-bg.png") no-repeat;
+  background: url("../images/quote-bg.png") no-repeat;
   background-size: 100% 100%; }
   #quote-first .quote-content {
     display: flex;
@@ -306,12 +306,12 @@ html, body, header, section, footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url("../../images/old_frame/icon-frame.png") no-repeat;
+      background: url("../images/old_frame/icon-frame.png") no-repeat;
       width: 167px;
       height: 181px;
       margin-bottom: 50px; }
       #quote-first .quote-content .quote-frame .quote-icon {
-        background: url("../../images/quote-icon.png") no-repeat;
+        background: url("../images/quote-icon.png") no-repeat;
         width: 68px;
         height: 60px; }
     #quote-first .quote-content .quote-text {
@@ -342,7 +342,7 @@ html, body, header, section, footer {
         width: 15rem;
         height: 15rem;
         border-radius: 50%;
-        background: url("../../images/team_imgs/profile%201.jpg") center no-repeat;
+        background: url("../images/team_imgs/profile%201.jpg") center no-repeat;
         margin: 0 auto 30% auto; }
       #team .team-profiles .profile-1 h4, #team .team-profiles .profile-2 h4, #team .team-profiles .profile-3 h4 {
         font-weight: bold; }
@@ -367,9 +367,9 @@ html, body, header, section, footer {
             border: 1px solid grey;
             font-size: 2rem; }
     #team .team-profiles .profile-2 .profile-img {
-      background: url("../../images/team_imgs/profile%202.png") center no-repeat; }
+      background: url("../images/team_imgs/profile%202.png") center no-repeat; }
     #team .team-profiles .profile-3 .profile-img {
-      background: url("../../images/team_imgs/profile%203.png") center no-repeat; }
+      background: url("../images/team_imgs/profile%203.png") center no-repeat; }
   #team .progress-bars {
     margin-top: 10vh;
     font-family: 'Lato'; }
@@ -427,7 +427,7 @@ html, body, header, section, footer {
   padding: 20rem 0; }
 
 #services {
-  background: url("../../images/quote-bg.png") no-repeat;
+  background: url("../images/quote-bg.png") no-repeat;
   background-size: 100% 100%; }
   #services .quote-content {
     display: flex;
@@ -438,12 +438,12 @@ html, body, header, section, footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url("../../images/old_frame/icon-frame.png") no-repeat;
+      background: url("../images/old_frame/icon-frame.png") no-repeat;
       width: 167px;
       height: 181px;
       margin-bottom: 50px; }
       #services .quote-content .quote-frame .quote-icon {
-        background: url("../../images/quote-icon.png") no-repeat;
+        background: url("../images/quote-icon.png") no-repeat;
         width: 68px;
         height: 60px; }
     #services .quote-content .quote-text {
@@ -493,7 +493,7 @@ html, body, header, section, footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url("../../images/icon-frame-small.png") no-repeat;
+        background: url("../images/icon-frame-small.png") no-repeat;
         width: 64px;
         height: 70px; }
         #blog .team-arrows .team-arw-left .left-arw-frame .left-arw {
@@ -506,7 +506,7 @@ html, body, header, section, footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url("../../images/icon-frame-small.png") no-repeat;
+        background: url("../images/icon-frame-small.png") no-repeat;
         width: 64px;
         height: 70px; }
         #blog .team-arrows .team-arw-right .right-arw-frame .right-arw {
@@ -567,7 +567,7 @@ html, body, header, section, footer {
     margin: 0 auto;
     cursor: pointer; }
     #portfolio .thumbnails .thumb-img:hover:after {
-      content: url("../../images/portfolio_imgs/cross.png");
+      content: url("../images/portfolio_imgs/cross.png");
       background: rgba(0, 0, 0, 0.5);
       width: 100%;
       height: 100%;
@@ -575,17 +575,17 @@ html, body, header, section, footer {
       text-align: center;
       vertical-align: middle; }
   #portfolio .thumbnails .thumb-1 div {
-    background: url("../../images/portfolio_imgs/portfolio-img1.png") center no-repeat; }
+    background: url("../images/portfolio_imgs/portfolio-img1.png") center no-repeat; }
   #portfolio .thumbnails .thumb-2 div {
-    background: url("../../images/portfolio_imgs/portfolio-img2.png") center no-repeat; }
+    background: url("../images/portfolio_imgs/portfolio-img2.png") center no-repeat; }
   #portfolio .thumbnails .thumb-3 div {
-    background: url("../../images/portfolio_imgs/portfolio-img3.png") center no-repeat; }
+    background: url("../images/portfolio_imgs/portfolio-img3.png") center no-repeat; }
   #portfolio .thumbnails .thumb-4 div {
-    background: url("../../images/portfolio_imgs/portfolio-img4.png") center no-repeat; }
+    background: url("../images/portfolio_imgs/portfolio-img4.png") center no-repeat; }
   #portfolio .thumbnails .thumb-5 div {
-    background: url("../../images/portfolio_imgs/portfolio-img5.png") center no-repeat; }
+    background: url("../images/portfolio_imgs/portfolio-img5.png") center no-repeat; }
   #portfolio .thumbnails .thumb-6 div {
-    background: url("../../images/portfolio_imgs/portfolio-img6.png") center no-repeat; }
+    background: url("../images/portfolio_imgs/portfolio-img6.png") center no-repeat; }
   #portfolio .invisible {
     display: none; }
   #portfolio .button {
@@ -643,7 +643,7 @@ html, body, header, section, footer {
       height: 5px;
       background-color: grey;
       transform: rotate(45deg);
-      background: url("../../images/header_icons/nav-1-icon.png") no-repeat; }
+      background: url("../images/header_icons/nav-1-icon.png") no-repeat; }
     #contact form textarea:focus {
       font-weight: bold;
       color: black; }
