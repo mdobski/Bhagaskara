@@ -39,7 +39,10 @@ $(function() {
             menu.addClass('sticky');
             var headerHeight = menu.height();
             
-            info.css('margin-top', headerHeight);
+            if ($(document).width() + 17 > 768) {
+                console.log($(window).width()+17);
+                info.css('margin-top', headerHeight);
+            }
         } else {
             menu.removeClass('sticky');
             
@@ -57,7 +60,10 @@ $(function() {
             menu.addClass('sticky');
             var headerHeight = menu.height();
             
-            info.css('margin-top', headerHeight);
+            if ($().width() + 17 > 768) {
+                console.log($(window).width()+17);
+                info.css('margin-top', headerHeight);
+            }
         } else {
             menu.removeClass('sticky');
             

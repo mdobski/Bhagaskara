@@ -260,48 +260,49 @@ html, body, header, section, footer {
 
 #about {
   padding: 10rem 0; }
-  #about .about-content {
-    display: flex; }
-    #about .about-content .about-devices-img {
-      background: url("../images/about-devices.png") no-repeat;
-      background-size: 100%;
-      width: 100%;
-      height: 0;
-      padding-bottom: 63.39969372128637%; }
-    #about .about-content .col-md-5 {
-      align-items: stretch; }
-    #about .about-content .about-description {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #676767;
-      font-family: 'Lato';
-      font-size: 1.5rem;
-      line-height: 3rem; }
-      #about .about-content .about-description a {
-        color: white;
-        background-color: #9f449b;
-        border-radius: 5px;
-        padding: 25px 60px;
-        font-size: 20px;
-        text-decoration: none;
-        border-top: 0.2rem solid #9f449b;
-        border-bottom: 5px solid #690869; }
-        #about .about-content .about-description a:hover {
-          background-color: white;
-          border: 2px solid #690869;
-          border-top: 5px solid #690869;
-          color: #690869; }
+  #about .about-content .about-devices-img {
+    background: url("../images/about-devices.png") no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 0;
+    padding-bottom: 63.39969372128637%; }
+  #about .about-content .col-md-5 {
+    align-items: stretch; }
+  #about .about-content .about-description {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #676767;
+    font-family: 'Lato';
+    font-size: 1.5rem;
+    line-height: 3rem; }
+    #about .about-content .about-description a {
+      color: white;
+      background-color: #9f449b;
+      border-radius: 5px;
+      padding: 25px 60px;
+      font-size: 20px;
+      text-decoration: none;
+      border-top: 0.2rem solid #9f449b;
+      border-bottom: 5px solid #690869; }
+      #about .about-content .about-description a:hover {
+        background-color: white;
+        border: 2px solid #690869;
+        border-top: 5px solid #690869;
+        color: #690869; }
 
 #quote-first {
   background: url("../images/quote-bg.png") no-repeat;
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  width: 100%;
+  height: 0;
+  padding-bottom: 31.2%; }
   #quote-first .quote-content {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 100px auto; }
+    margin: 10rem auto; }
     #quote-first .quote-content .quote-frame {
       display: flex;
       justify-content: center;
@@ -309,14 +310,14 @@ html, body, header, section, footer {
       background: url("../images/old_frame/icon-frame.png") no-repeat;
       width: 167px;
       height: 181px;
-      margin-bottom: 50px; }
+      margin-bottom: 5rem; }
       #quote-first .quote-content .quote-frame .quote-icon {
         background: url("../images/quote-icon.png") no-repeat;
-        width: 68px;
-        height: 60px; }
+        width: 6.8rem;
+        height: 6rem; }
     #quote-first .quote-content .quote-text {
       font-family: 'Lato';
-      font-size: 50px;
+      font-size: 5rem;
       color: white; }
 
 #team {
@@ -527,7 +528,7 @@ html, body, header, section, footer {
       #blog .feedback .nav-dots .dot-selected {
         background-color: grey; }
   #blog .blog-arrows {
-    margin: 50px auto;
+    margin: 5vh auto;
     display: flex;
     justify-content: center; }
     #blog .blog-arrows .blog-arw-left {
@@ -754,6 +755,37 @@ html, body, header, section, footer {
   text-align: center;
   margin: 40px 0; }
 
-@media (min-width: 992px) {
-  .services, .about, .blog {
-    float: right; } }
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 8px; }
+
+  #quote-first, #services {
+    display: none; }
+
+  #blog .user-text {
+    margin: 0 !important; } }
+@media screen and (max-width: 768px) {
+  #home {
+    display: none; }
+
+  nav {
+    display: none; }
+
+  #team {
+    padding: 0; }
+    #team .team-profiles {
+      margin: 0; }
+    #team .progress-bars [class*='skill-'] {
+      padding: 0 !important; }
+      #team .progress-bars [class*='skill-'] > div {
+        float: left; }
+    #team .progress-bars [class*='-bar'] {
+      width: 100% !important; }
+      #team .progress-bars [class*='-bar'] [class*='-percentage'] {
+        float: right; } }
+@media screen and (max-width: 1024px) {
+  #header ul li a {
+    font-size: 1.2rem; }
+
+  #portfolio .container {
+    padding: 0; } }

@@ -300,7 +300,7 @@ html, body, header, section, footer {
 #about {
     padding: 10rem 0;
     .about-content {
-        display: flex;
+//        display: flex;
         .about-devices-img {
             background: url('../images/about-devices.png') no-repeat;
             background-size: 100%;
@@ -345,11 +345,14 @@ html, body, header, section, footer {
 #quote-first {
     background: url('../images/quote-bg.png') no-repeat;
     background-size: 100% 100%;
+    width: 100%;
+    height: 0;
+    padding-bottom: 31.2%;
     .quote-content {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin: 100px auto;
+        margin: 10rem auto;
         .quote-frame {
             display: flex;
             justify-content: center;
@@ -357,16 +360,16 @@ html, body, header, section, footer {
             background: url('../images/old_frame/icon-frame.png') no-repeat;
             width: 167px;
             height: 181px;
-            margin-bottom: 50px;
+            margin-bottom: 5rem;
             .quote-icon {
                 background: url('../images/quote-icon.png') no-repeat;
-                width: 68px;
-                height: 60px;
+                width: 6.8rem;
+                height: 6rem;
             }
         }
         .quote-text {
             font-family: 'Lato';
-            font-size: 50px;
+            font-size: 5rem;
             color: white;
         }
     }
@@ -676,7 +679,7 @@ html, body, header, section, footer {
         }
     }
     .blog-arrows {
-        margin: 50px auto;
+        margin: 5vh auto;
         display: flex;
         justify-content: center;
         .blog-arw-left {
@@ -985,14 +988,72 @@ html, body, header, section, footer {
 
 
 
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 8px;
+    }
+    
+    #quote-first, #services {
+        display: none;
+    }
+    
 
-
-
-@media (min-width: 992px) {
-    .services, .about, .blog {
-        float: right;
+    
+    #blog {
+        .user-text {
+            margin: 0 !important;
+        }
     }
 }
 
+@media screen and (max-width: 768px) {
+    #home {
+        display: none;
+    }
+    nav {
+        display: none;
+    }
+    #team {
+        padding: 0;
+        .team-profiles {
+            margin: 0;
+        }
+        .progress-bars {
+            [class*='skill-'] {
+                padding: 0 !important;
+                & > div {
+                    float: left;
+                }
+            }
+            [class*='-bar'] {
+                width: 100% !important;
+                [class*='-percentage'] {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #header {
+        ul {
+            li {
+                a {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    #portfolio {
+        .container {
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    
+}
 
 
