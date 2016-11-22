@@ -277,6 +277,8 @@ html, body, header, section, footer {
     font-family: 'Lato';
     font-size: 1.5rem;
     line-height: 3rem; }
+    #about .about-content .about-description p {
+      margin-bottom: 50px; }
     #about .about-content .about-description a {
       color: white;
       background-color: #9f449b;

@@ -320,6 +320,9 @@ html, body, header, section, footer {
             font-family: 'Lato';
             font-size: 1.5rem;
             line-height: 3rem;
+            p {
+                margin-bottom: 50px;
+            }
             a {
                 color: white;
                 background-color: $purple;

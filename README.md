@@ -17,4 +17,4 @@ is my first big project based on a PSD. I transformed it a little, just to add s
 * Infinite slider for comments
 * Gallery with fullscreen view
 
-#### [**View this project**](https://mdobski.github.io/Bhagaskara/) ####
+## [View this project](https://mdobski.github.io/Bhagaskara/) ##
